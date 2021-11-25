@@ -8,7 +8,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // firebase admin initialization
-var serviceAccount = require('./ema-john-shop-24-firebase-adminsdk-nzcit-fe1e711b5f.json');
+var serviceAccount = require(process.env.FIREBASE_ACCOUNT);
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
